@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "Bash(python *)",
+      "WebSearch",
+      "WebFetch(domain:cleaning-showa.jp)",
+      "WebFetch(domain:www.hakusensha.tokyo)",
+      "WebFetch(domain:cruw.co.jp)",
+      "WebFetch(domain:www.hakuyosha.co.jp)",
+      "WebFetch(domain:leapy.jp)",
+      "WebFetch(domain:www.white-ex.co.jp)"
+    ]
+  }
+}
