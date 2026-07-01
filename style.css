@@ -38,19 +38,34 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* 固定ヘッダーによる隠れ防止（76px ヘッダー + 余白） */
+/* 固定ヘッダー(76px) + サイトナビ(48px) + 余白 */
 [id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 136px;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif;
   font-size: 18px;
   line-height: 1.85;
   color: var(--text-mid);
   background: var(--pink-pale);
+  padding-top: 124px; /* ヘッダー76px + サイトナビ48px */
+}
+
+img,
+picture,
+video,
+iframe,
+svg {
+  max-width: 100%;
 }
 
 a {
@@ -80,6 +95,48 @@ img {
 
 .sec {
   padding: 88px 0;
+}
+
+/* ===========================
+   サイトナビゲーション
+=========================== */
+.site-nav {
+  position: fixed;
+  top: 76px;
+  left: 0;
+  width: 100%;
+  background: var(--pink);
+  z-index: 99;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  min-width: max-content;
+  width: 100%;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.18s;
+}
+
+.site-nav__link:hover {
+  background: var(--pink-dark);
+  opacity: 1;
 }
 
 /* ===========================
@@ -520,6 +577,7 @@ img {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 /* 背後装飾なし（ピンク円・点線円を削除） */
@@ -912,6 +970,7 @@ img {
   align-items: center;
   justify-content: center;
   padding: 80px 40px;
+  overflow: hidden;
 }
 
 .about-v2__mascot-wrap::before {
@@ -978,12 +1037,12 @@ img {
   }
 
   .about-v2__feature-banner {
-    width: calc(100% + 40px);
-    max-width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 24px;
-    border-radius: 0;
+    border-radius: var(--radius);
   }
 
   .about-v2__right {
@@ -994,6 +1053,11 @@ img {
   .about-v2__mascot-wrap {
     max-width: 220px;
     padding: 28px;
+  }
+
+  .about-v2__orbit-clip {
+    width: 220px;
+    height: 220px;
   }
 
 }
@@ -2092,6 +2156,7 @@ details[open] .faq-q::after {
 
 .main-shop__map {
   width: 100%;
+  max-width: 100%;
   height: 200px;
   display: block;
   border: none;
@@ -2471,6 +2536,7 @@ details[open] .faq-q::after {
 
   .pickup-flow-image {
     width: 100%;
+    max-width: 100%;
     transform: none;
   }
 
@@ -2540,7 +2606,12 @@ details[open] .faq-q::after {
     transform: none;
   }
 
-  [id] { scroll-margin-top: 76px; }
+  [id] { scroll-margin-top: 120px; }
+
+  .site-nav__link {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
 
   .hero {
     padding: 88px 0 48px;
@@ -2559,8 +2630,8 @@ details[open] .faq-q::after {
   }
 
   .hero__orbit-clip {
-    width: 320px;
-    height: 320px;
+    width: min(300px, 90vw);
+    height: min(300px, 90vw);
   }
 
   .hero__brand {
