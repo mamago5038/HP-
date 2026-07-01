@@ -869,27 +869,66 @@ img {
 }
 
 /* ===========================
-   会社紹介 ワイシャツ写真
+   ヒーロー
 =========================== */
-.about-shirt {
-  padding: 8px 28px 56px;
+.hero {
+  background: var(--white);
 }
 
-.about-shirt__img {
+.hero__inner {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+.hero__photo {
+  overflow: hidden;
+}
+
+.hero__img {
   width: 100%;
-  max-height: 420px;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
   display: block;
 }
 
-@media (max-width: 640px) {
-  .about-shirt {
-    padding: 8px 16px 40px;
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 40px 48px 44px;
+}
+
+.hero__title {
+  font-size: clamp(1.5rem, 2.8vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.hero__mascot {
+  width: 170px;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
-  .about-shirt__img {
-    max-height: 260px;
+  .hero__photo {
+    height: 260px;
+  }
+  .hero__content {
+    padding: 32px 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__mascot {
+    width: 120px;
   }
 }
 
