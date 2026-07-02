@@ -515,6 +515,13 @@ img {
   gap: 12px;
 }
 
+.line-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-mid);
+  margin-top: 10px;
+}
+
 /* ===========================
    ページヒーロー（下層ページ共通）
 =========================== */
