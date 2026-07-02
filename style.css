@@ -233,6 +233,27 @@ img {
   letter-spacing: 0.06em;
 }
 
+/* スマホ用：電話アイコンボタン（通常は非表示、640px以下でのみ表示） */
+.header__tel-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--pink-light);
+  color: var(--pink-dark);
+  border: 1.5px solid var(--border);
+  transition: background 0.18s, color 0.18s;
+}
+
+.header__tel-btn:hover {
+  background: var(--pink);
+  color: #fff;
+  opacity: 1;
+}
+
 /* ===========================
    固定ドロワーボタン
 =========================== */
@@ -2448,6 +2469,21 @@ details[open] .faq-q::after {
   body { font-size: 16px; }
 
   .header__tel { display: none; }
+
+  .header__tel-btn { display: flex; }
+
+  .header__right { gap: 10px; }
+
+  .btn-line--sm {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+
+  .btn-line--sm svg {
+    width: 15px;
+    height: 15px;
+  }
 
   .logo__name { font-size: 1.1rem; }
 
