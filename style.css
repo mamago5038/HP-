@@ -442,10 +442,6 @@ img {
   font-size: 0.92rem;
 }
 
-.btn-line__short {
-  display: none;
-}
-
 .btn-line--lg {
   padding: 18px 40px;
   font-size: 1.15rem;
@@ -2488,14 +2484,20 @@ details[open] .faq-q::after {
   .header__right { gap: 8px; }
 
   .btn-line--sm {
-    padding: 10px 14px;
-    font-size: 0.8rem;
-    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
   }
 
-  .btn-line__full { display: none; }
+  .btn-line--sm svg {
+    width: 22px;
+    height: 22px;
+  }
 
-  .btn-line__short { display: inline; }
+  .btn-line__full {
+    display: none;
+  }
 
   .logo__company { display: none; }
 
