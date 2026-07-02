@@ -2017,12 +2017,15 @@ details[open] .faq-q::after {
 }
 
 .strength-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 
 .strength-card {
+  flex: 1 1 280px;
+  max-width: 340px;
   background: var(--white);
   border: 3px solid var(--pink);
   border-radius: var(--radius-lg);
@@ -2060,9 +2063,13 @@ details[open] .faq-q::after {
 
 @media (max-width: 960px) {
   .strength-cards {
-    grid-template-columns: 1fr;
     max-width: 520px;
     margin: 0 auto;
+  }
+
+  .strength-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
