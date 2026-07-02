@@ -2421,6 +2421,14 @@ details[open] .faq-q::after {
   line-height: 1.7;
 }
 
+.local-shop__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 4px;
+}
+
 .local-shop__tel {
   display: inline-flex;
   align-items: center;
@@ -2429,11 +2437,31 @@ details[open] .faq-q::after {
   font-weight: 700;
   color: var(--pink-dark);
   text-decoration: none;
-  margin-top: 4px;
   transition: color 0.18s;
 }
 
 .local-shop__tel:hover {
+  color: var(--pink);
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.local-shop__map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.18s;
+}
+
+.local-shop__map-btn:hover {
   color: var(--pink);
   text-decoration: underline;
   opacity: 1;
