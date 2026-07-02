@@ -14,6 +14,8 @@
   --border:     #F0C8D4;   /* 枠線 */
   --line-green: #06C755;
   --line-dark:  #05A847;
+  --line-pale:   #F0FDF4;   /* LINE友だち追加バナー背景 */
+  --line-border: #BBF0D0;
   --green:        #4A9B7F;   /* 法人向けセクション用アクセントグリーン */
   --green-dark:   #357A62;
   --green-pale:   #EAF6F1;   /* 法人向けセクション背景 */
@@ -924,6 +926,46 @@ img {
     height: 220px;
   }
 
+}
+
+/* ===========================
+   LINE友だち追加クーポン
+=========================== */
+.line-coupon {
+  background: var(--pink-pale);
+}
+
+.line-coupon__box {
+  background: var(--line-pale);
+  border: 1.5px solid var(--line-border);
+  border-radius: var(--radius-lg);
+  padding: 48px 56px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.line-coupon__eyebrow {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--line-dark);
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.line-coupon__title {
+  font-size: clamp(1.4rem, 3.4vw, 2rem);
+  font-weight: 900;
+  color: var(--line-dark);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.line-coupon__desc {
+  max-width: 640px;
+  margin: 0 auto 32px;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.9;
 }
 
 /* ===========================
@@ -2636,6 +2678,10 @@ details[open] .faq-q::after {
     padding: 36px 28px;
   }
 
+  .line-coupon__box {
+    padding: 36px 28px;
+  }
+
   .flow-steps {
     flex-direction: column;
     align-items: stretch;
@@ -2823,6 +2869,10 @@ details[open] .faq-q::after {
   .corporate__btns {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .line-coupon__box {
+    padding: 28px 20px;
   }
 
   .cta-mascot {
