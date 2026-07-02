@@ -442,6 +442,10 @@ img {
   font-size: 0.92rem;
 }
 
+.btn-line__short {
+  display: none;
+}
+
 .btn-line--lg {
   padding: 18px 40px;
   font-size: 1.15rem;
@@ -2470,26 +2474,40 @@ details[open] .faq-q::after {
 
   .header__tel { display: none; }
 
-  .header__tel-btn { display: flex; }
+  .header__tel-btn {
+    display: flex;
+    width: 44px;
+    height: 44px;
+  }
 
-  .header__right { gap: 10px; }
+  .header__tel-btn svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .header__right { gap: 8px; }
 
   .btn-line--sm {
-    padding: 8px 14px;
+    padding: 10px 14px;
     font-size: 0.8rem;
     gap: 5px;
   }
 
-  .btn-line--sm svg {
-    width: 15px;
-    height: 15px;
+  .btn-line__full { display: none; }
+
+  .btn-line__short { display: inline; }
+
+  .logo__company { display: none; }
+
+  .logo__name { font-size: 1rem; }
+
+  .logo__img { width: 36px; height: 36px; }
+
+  .header__inner {
+    height: 64px;
+    padding: 0 16px;
+    gap: 8px;
   }
-
-  .logo__name { font-size: 1.1rem; }
-
-  .logo__img { width: 40px; height: 40px; }
-
-  .header__inner { height: 64px; }
 
   .drawer-panel {
     width: 85vw;
