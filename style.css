@@ -2033,6 +2033,14 @@ details[open] .faq-q::after {
   letter-spacing: 0.04em;
 }
 
+.info-table__note {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+}
+
 .info-map {
   border-radius: var(--radius-lg);
   overflow: hidden;
