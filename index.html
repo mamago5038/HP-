@@ -28,7 +28,7 @@
 <body>
 
   <!-- ヘッダー -->
-  <header class="header">
+  <header class="header" id="top">
     <div class="container header__inner">
       <a href="#top" class="logo">
         <img src="mascot.png" alt="ロゴ" class="logo__img" style="mix-blend-mode: multiply;">
@@ -59,98 +59,77 @@
   <!-- サイトナビゲーション -->
   <nav class="site-nav" aria-label="サイトナビゲーション">
     <ul class="site-nav__list">
+      <li><a href="#sale"     class="site-nav__link">セール</a></li>
       <li><a href="#pickup"   class="site-nav__link">無料集配</a></li>
       <li><a href="#services" class="site-nav__link">サービス・料金</a></li>
-      <li><a href="#sale"     class="site-nav__link">セール</a></li>
       <li><a href="#faq"      class="site-nav__link">よくある質問</a></li>
+      <li><a href="#shops"    class="site-nav__link">店舗・アクセス</a></li>
       <li><a href="#company"  class="site-nav__link">会社紹介</a></li>
-      <li><a href="#shops"    class="site-nav__link">店舗案内</a></li>
       <li><a href="#contact"  class="site-nav__link">お問い合わせ</a></li>
     </ul>
   </nav>
 
-  <!-- ヒーロー -->
-  <section class="hero" id="top">
-    <img
-      src="https://images.unsplash.com/photo-1630329273801-8f629dba0a72?w=1600&auto=format&fit=crop&crop=center"
-      alt="仕上がったワイシャツ"
-      class="hero__img"
-    >
-  </section>
+  <!-- 開催中のセール -->
+  <section class="sale-sec sec" id="sale">
+    <div class="container">
+      <h2 class="sec-title">開催中のセール</h2>
 
-  <!-- セクション2: 会社紹介 -->
-  <section class="about-v2">
-    <div class="about-v2__inner">
-
-      <!-- ① 小見出し -->
-      <div class="about-v2__label">
-        <span class="about-v2__en">ABOUT MAMAGO</span>
-        <span class="about-v2__ja">クリーニングのママ号について</span>
+      <!-- ▼ セール開催中：sale-bannersとsale-infoを表示。セールなし時はこれらをコメントアウトしsale-emptyを使用 -->
+      <div class="sale-banners">
+        <img src="sale-banner.jpeg"   alt="クリーニングセール案内（1）" class="sale-banner-img sale-lightbox-trigger" loading="lazy">
+        <img src="sale-banner-2.jpeg" alt="クリーニングセール案内（2）" class="sale-banner-img sale-lightbox-trigger" loading="lazy">
       </div>
 
-      <!-- ② 大見出し -->
-      <h2 class="about-v2__title">
-        津軽の暮らしとともに、<br>
-        歩んできたクリーニング店です。
-      </h2>
+      <div class="sale-info">
 
-      <!-- ③ 会社紹介文 -->
-      <div class="about-v2__body">
-        <p>クリーニングのママ号は、五所川原市を中心に、津軽地域で店舗営業と巡回集配を行う地域密着型のクリーニング店です。</p>
-        <p>普段着やスーツ、ワイシャツをはじめ、布団・毛布・じゅうたん・着物など、ご家庭ではお手入れが難しい品物もお預かりしています。</p>
-        <p>衣類の状態や素材を確認し、一点一点に合った方法で丁寧に仕上げること。そして、お客様が安心して大切な衣類を預けられるお店であることを、私たちは大切にしています。</p>
-        <p>これからも地域の皆さまの身近なクリーニング店として、津軽の暮らしに寄り添い続けます。</p>
-      </div>
+        <!-- 開催期間 -->
+        <div class="sale-period">
+          <span class="sale-period__badge">開催期間</span>
+          <span class="sale-period__dates">2026年6月13日〜7月31日まで</span>
+        </div>
 
-      <!-- ④ 特徴バナー -->
-      <img src="feature-banner.png" alt="クリーニングのママ号の特徴" class="about-v2__feature-banner">
+        <!-- 説明文 -->
+        <p class="sale-desc">期間限定のお得なセールを開催中です。対象商品や詳しい料金は、上記のセール画像をご確認ください。画像をクリックすると、大きく表示してご覧いただけます。</p>
 
-      <!-- 右カラム：マスコット -->
-      <div class="about-v2__right">
-        <div class="about-v2__mascot-wrap">
-          <!-- 軌道トラック（静止破線） -->
-          <div class="about-v2__orbit-track-wrap" aria-hidden="true">
-            <svg class="about-v2__orbit-track-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="320" cy="320" rx="270" ry="270" fill="none" stroke="rgba(200,79,112,0.18)" stroke-width="1.5" stroke-dasharray="8 6"/>
-            </svg>
-          </div>
-          <!-- 星の軌道 背面レイヤー（マスコットの後ろ） -->
-          <div class="about-v2__orbit-clip about-v2__orbit-clip--back">
-            <div class="about-v2__orbit-spin">
-              <svg class="about-v2__orbit-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(590,320)" fill="#FFD700"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,511)" fill="#FF69B4"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,590)" fill="#20D9C0"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,511)" fill="#B06AE0"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(50,320)"  fill="#FF6B9D"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,129)" fill="#38C8E0"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,50)"  fill="#FFAA00"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,129)" fill="#A0E050"/>
-              </svg>
-            </div>
-          </div>
-          <!-- マスコット画像 -->
-          <img src="mascot.png" alt="クリーニングのママ号マスコット" class="about-v2__mascot" style="mix-blend-mode: multiply;">
-          <!-- 星の軌道 前面レイヤー（マスコットの手前） -->
-          <div class="about-v2__orbit-clip about-v2__orbit-clip--front">
-            <div class="about-v2__orbit-spin">
-              <svg class="about-v2__orbit-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(590,320)" fill="#FFD700"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,511)" fill="#FF69B4"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,590)" fill="#20D9C0"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,511)" fill="#B06AE0"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(50,320)"  fill="#FF6B9D"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,129)" fill="#38C8E0"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,50)"  fill="#FFAA00"/>
-                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,129)" fill="#A0E050"/>
-              </svg>
-            </div>
+        <!-- 注意事項 -->
+        <div class="sale-notes">
+          <p class="sale-note">※一部対象外のお品物があります。</p>
+          <p class="sale-note">※素材や状態によって追加料金が発生する場合があります。</p>
+          <p class="sale-note">※詳しくはLINEまたは店舗へお問い合わせください。</p>
+        </div>
+
+        <!-- 問い合わせ案内 -->
+        <div class="sale-inquiry">
+          <p class="sale-inquiry__title">セールについてお気軽にお問い合わせください</p>
+          <ul class="sale-inquiry__items">
+            <li class="sale-inquiry__item">この品物がセール対象か確認したい</li>
+            <li class="sale-inquiry__item">集配でもセールを利用できるか相談したい</li>
+            <li class="sale-inquiry__item">品物の詳しい料金を確認したい</li>
+          </ul>
+          <div class="sale-btn-pair">
+            <a href="https://lin.ee/rT3CLPX" class="btn-line btn-line--lg" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 10.6c0-4.9-4.9-8.9-11-8.9S0 5.7 0 10.6c0 4.4 3.9 8.1 9.2 8.8.4.1.9.3 1 .6.1.3.1.7 0 1l-.2.9c0 .3-.2 1.1 1 .6s6.2-3.7 8.5-6.3c1.6-1.7 2.5-3.5 2.5-5.6z"/></svg>
+              LINEでセールについて問い合わせる
+            </a>
+            <a href="tel:0120569887" class="sale-btn-tel">
+              <span class="sale-btn-tel__label">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .99h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.5a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                電話で問い合わせる
+              </span>
+              <span class="sale-btn-tel__num">0120-569-887</span>
+            </a>
           </div>
         </div>
+
       </div>
 
-    </div>
+      <!-- ▼ セールなし時：上のsale-bannersとsale-infoをコメントアウトし、このコメントを外す
+      <div class="sale-empty">
+        <p>現在開催中のセールはありません。次回のお知らせをお待ちください。</p>
+      </div>
+      -->
 
+    </div>
   </section>
 
   <!-- 無料集配アピール -->
@@ -255,69 +234,6 @@
     </div>
   </section>
 
-  <!-- 開催中のセール -->
-  <section class="sale-sec sec" id="sale">
-    <div class="container">
-      <h2 class="sec-title">開催中のセール</h2>
-
-      <!-- ▼ セール開催中：sale-bannersとsale-infoを表示。セールなし時はこれらをコメントアウトしsale-emptyを使用 -->
-      <div class="sale-banners">
-        <img src="sale-banner.jpeg"   alt="クリーニングセール案内（1）" class="sale-banner-img sale-lightbox-trigger" loading="lazy">
-        <img src="sale-banner-2.jpeg" alt="クリーニングセール案内（2）" class="sale-banner-img sale-lightbox-trigger" loading="lazy">
-      </div>
-
-      <div class="sale-info">
-
-        <!-- 開催期間 -->
-        <div class="sale-period">
-          <span class="sale-period__badge">開催期間</span>
-          <span class="sale-period__dates">2026年6月13日〜7月31日まで</span>
-        </div>
-
-        <!-- 説明文 -->
-        <p class="sale-desc">期間限定のお得なセールを開催中です。対象商品や詳しい料金は、上記のセール画像をご確認ください。画像をクリックすると、大きく表示してご覧いただけます。</p>
-
-        <!-- 注意事項 -->
-        <div class="sale-notes">
-          <p class="sale-note">※一部対象外のお品物があります。</p>
-          <p class="sale-note">※素材や状態によって追加料金が発生する場合があります。</p>
-          <p class="sale-note">※詳しくはLINEまたは店舗へお問い合わせください。</p>
-        </div>
-
-        <!-- 問い合わせ案内 -->
-        <div class="sale-inquiry">
-          <p class="sale-inquiry__title">セールについてお気軽にお問い合わせください</p>
-          <ul class="sale-inquiry__items">
-            <li class="sale-inquiry__item">この品物がセール対象か確認したい</li>
-            <li class="sale-inquiry__item">集配でもセールを利用できるか相談したい</li>
-            <li class="sale-inquiry__item">品物の詳しい料金を確認したい</li>
-          </ul>
-          <div class="sale-btn-pair">
-            <a href="https://lin.ee/rT3CLPX" class="btn-line btn-line--lg" target="_blank" rel="noopener noreferrer">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 10.6c0-4.9-4.9-8.9-11-8.9S0 5.7 0 10.6c0 4.4 3.9 8.1 9.2 8.8.4.1.9.3 1 .6.1.3.1.7 0 1l-.2.9c0 .3-.2 1.1 1 .6s6.2-3.7 8.5-6.3c1.6-1.7 2.5-3.5 2.5-5.6z"/></svg>
-              LINEでセールについて問い合わせる
-            </a>
-            <a href="tel:0120569887" class="sale-btn-tel">
-              <span class="sale-btn-tel__label">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .99h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.5a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-                電話で問い合わせる
-              </span>
-              <span class="sale-btn-tel__num">0120-569-887</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- ▼ セールなし時：上のsale-bannersとsale-infoをコメントアウトし、このコメントを外す
-      <div class="sale-empty">
-        <p>現在開催中のセールはありません。次回のお知らせをお待ちください。</p>
-      </div>
-      -->
-
-    </div>
-  </section>
-
   <!-- よくある質問 -->
   <section class="faq-sec sec" id="faq">
     <div class="container">
@@ -350,10 +266,10 @@
     </div>
   </section>
 
-  <!-- 店舗情報 / 会社概要 -->
-  <section class="info-sec sec" id="company">
+  <!-- 店舗・アクセス情報（会社概要＋店舗一覧を統合） -->
+  <section class="info-sec sec" id="shops">
     <div class="container">
-      <h2 class="sec-title">会社概要・店舗情報</h2>
+      <h2 class="sec-title">店舗・アクセス情報</h2>
       <div class="info-grid">
         <div class="info-left">
           <table class="info-table">
@@ -415,13 +331,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 店舗・受付店一覧 -->
-  <section class="shops-sec sec" id="shops">
-    <div class="container">
-      <h2 class="sec-title">お近くのクリーニングのママ号</h2>
+      <!-- 店舗一覧 -->
       <p class="shops-lead">津軽地方の各地でご利用いただけます。<br>PayPay対応・ポイント特典のある主要店舗と地域の受付店をご活用ください。</p>
 
       <!-- 主要店舗 -->
@@ -431,7 +342,10 @@
       <div class="main-shops-grid">
 
         <div class="main-shop-card">
-          <iframe class="main-shop__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.650793558841!2d140.22201178972824!3d40.777620197599276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9bb3484f5aa6c7%3A0x1bb27368508b91f9!2z44Kv44Oq44O844OL44Oz44Kw44Gu44Oe44Oe5Y-3IEsy44Oe44O844OI5bqX!5e1!3m2!1sja!2sjp!4v1782622240168!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <button type="button" class="main-shop__map-btn map-lightbox-trigger" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.650793558841!2d140.22201178972824!3d40.777620197599276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9bb3484f5aa6c7%3A0x1bb27368508b91f9!2z44Kv44Oq44O844OL44Oz44Kw44Gu44Oe44Oe5Y-3IEsy44Oe44O844OI5bqX!5e1!3m2!1sja!2sjp!4v1782622240168!5m2!1sja!2sjp" aria-label="K2マート店の地図を見る">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            地図を見る
+          </button>
           <p class="main-shop__name">K2マート店</p>
           <p class="main-shop__address">鰺ヶ沢町大字舞戸町字西売25-2</p>
           <div class="main-shop__hours">
@@ -455,7 +369,10 @@
         </div>
 
         <div class="main-shop-card">
-          <iframe class="main-shop__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224.71562387447065!2d140.46811606862607!3d40.78133008509093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ba5000788ab41%3A0xcbfb6e6e8765239e!2z44Kv44Oq44O844OL44Oz44Kw44Gu44Oe44Oe5Y-3IOODiOODqeOCpOOCouODq-W6g-eUsOW6lw!5e1!3m2!1sja!2sjp!4v1782622310759!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <button type="button" class="main-shop__map-btn map-lightbox-trigger" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224.71562387447065!2d140.46811606862607!3d40.78133008509093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9ba5000788ab41%3A0xcbfb6e6e8765239e!2z44Kv44Oq44O844OL44Oz44Kw44Gu44Oe44Oe5Y-3IOODiOODqeOCpOOCouODq-W6g-eUsOW6lw!5e1!3m2!1sja!2sjp!4v1782622310759!5m2!1sja!2sjp" aria-label="TRIAL広田店の地図を見る">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            地図を見る
+          </button>
           <p class="main-shop__name">TRIAL広田店</p>
           <p class="main-shop__address">五所川原市大字広田字榊森9-2</p>
           <div class="main-shop__hours">
@@ -479,7 +396,10 @@
         </div>
 
         <div class="main-shop-card">
-          <iframe class="main-shop__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.7528129586713!2d140.4419160727117!3d40.76450410898871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9baf7393e65df1%3A0x55f4d1496df5bdac!2z44Kv44Oq44O844OL44Oz44Kw44Oe44Oe5Y-344OV44OD44OJ44Oq44OQ44O844Oi44O844Or5bqX!5e1!3m2!1sja!2sjp!4v1782622376353!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <button type="button" class="main-shop__map-btn map-lightbox-trigger" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.7528129586713!2d140.4419160727117!3d40.76450410898871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9baf7393e65df1%3A0x55f4d1496df5bdac!2z44Kv44Oq44O844OL44Oz44Kw44Oe44Oe5Y-344OV44OD44OJ44Oq44OQ44O844Oi44O844Or5bqX!5e1!3m2!1sja!2sjp!4v1782622376353!5m2!1sja!2sjp" aria-label="フットリバーモール店の地図を見る">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            地図を見る
+          </button>
           <p class="main-shop__name">フットリバーモール店</p>
           <p class="main-shop__address">鶴田町大字鶴田字中泉245番地1</p>
           <div class="main-shop__hours">
@@ -568,6 +488,81 @@
     </div>
   </section>
 
+  <!-- セクション: 会社紹介 -->
+  <section class="about-v2" id="company">
+    <div class="about-v2__inner">
+
+      <!-- ① 小見出し -->
+      <div class="about-v2__label">
+        <span class="about-v2__en">ABOUT MAMAGO</span>
+        <span class="about-v2__ja">クリーニングのママ号について</span>
+      </div>
+
+      <!-- ② 大見出し -->
+      <h2 class="about-v2__title">
+        津軽の暮らしとともに、<br>
+        歩んできたクリーニング店です。
+      </h2>
+
+      <!-- ③ 会社紹介文 -->
+      <div class="about-v2__body">
+        <p>クリーニングのママ号は、五所川原市を中心に、津軽地域で店舗営業と巡回集配を行う地域密着型のクリーニング店です。</p>
+        <p>普段着やスーツ、ワイシャツをはじめ、布団・毛布・じゅうたん・着物など、ご家庭ではお手入れが難しい品物もお預かりしています。</p>
+        <p>衣類の状態や素材を確認し、一点一点に合った方法で丁寧に仕上げること。そして、お客様が安心して大切な衣類を預けられるお店であることを、私たちは大切にしています。</p>
+        <p>これからも地域の皆さまの身近なクリーニング店として、津軽の暮らしに寄り添い続けます。</p>
+      </div>
+
+      <!-- ④ 特徴バナー -->
+      <img src="feature-banner.png" alt="クリーニングのママ号の特徴" class="about-v2__feature-banner">
+
+      <!-- 右カラム：マスコット -->
+      <div class="about-v2__right">
+        <div class="about-v2__mascot-wrap">
+          <!-- 軌道トラック（静止破線） -->
+          <div class="about-v2__orbit-track-wrap" aria-hidden="true">
+            <svg class="about-v2__orbit-track-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="320" cy="320" rx="270" ry="270" fill="none" stroke="rgba(200,79,112,0.18)" stroke-width="1.5" stroke-dasharray="8 6"/>
+            </svg>
+          </div>
+          <!-- 星の軌道 背面レイヤー（マスコットの後ろ） -->
+          <div class="about-v2__orbit-clip about-v2__orbit-clip--back">
+            <div class="about-v2__orbit-spin">
+              <svg class="about-v2__orbit-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(590,320)" fill="#FFD700"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,511)" fill="#FF69B4"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,590)" fill="#20D9C0"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,511)" fill="#B06AE0"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(50,320)"  fill="#FF6B9D"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,129)" fill="#38C8E0"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,50)"  fill="#FFAA00"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,129)" fill="#A0E050"/>
+              </svg>
+            </div>
+          </div>
+          <!-- マスコット画像 -->
+          <img src="mascot.png" alt="クリーニングのママ号マスコット" class="about-v2__mascot" style="mix-blend-mode: multiply;">
+          <!-- 星の軌道 前面レイヤー（マスコットの手前） -->
+          <div class="about-v2__orbit-clip about-v2__orbit-clip--front">
+            <div class="about-v2__orbit-spin">
+              <svg class="about-v2__orbit-svg" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(590,320)" fill="#FFD700"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,511)" fill="#FF69B4"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,590)" fill="#20D9C0"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,511)" fill="#B06AE0"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(50,320)"  fill="#FF6B9D"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(129,129)" fill="#38C8E0"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(320,50)"  fill="#FFAA00"/>
+                <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.3,1.4 6.5,8.9 0,4.5 -6.5,8.9 -4.3,1.4 -10.5,-3.4 -2.6,-3.6" transform="translate(511,129)" fill="#A0E050"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- LINEお問い合わせCTA -->
   <section class="cta-section" id="contact">
     <div class="container cta-inner">
@@ -597,10 +592,10 @@
         <span class="footer__name">株式会社クリーニングのママ号</span>
       </div>
       <nav class="footer__nav" aria-label="フッターナビゲーション">
-        <a href="#services">サービス・料金</a>
         <a href="#sale">セール</a>
+        <a href="#services">サービス・料金</a>
+        <a href="#shops">店舗・アクセス</a>
         <a href="#company">会社紹介</a>
-        <a href="#shops">店舗案内</a>
         <a href="#contact">お問い合わせ</a>
       </nav>
       <hr class="footer__divider">
@@ -633,11 +628,12 @@
       <button class="drawer-close" id="drawer-close" type="button" aria-label="メニューを閉じる">×</button>
     </div>
     <ul class="drawer-nav">
+      <li><a href="#sale"     class="drawer-nav__link">セール</a></li>
       <li><a href="#pickup"   class="drawer-nav__link">無料集配</a></li>
       <li><a href="#services" class="drawer-nav__link">サービス・料金</a></li>
-      <li><a href="#sale"     class="drawer-nav__link">セール</a></li>
+      <li><a href="#faq"      class="drawer-nav__link">よくある質問</a></li>
+      <li><a href="#shops"    class="drawer-nav__link">店舗・アクセス</a></li>
       <li><a href="#company"  class="drawer-nav__link">会社紹介</a></li>
-      <li><a href="#shops"    class="drawer-nav__link">店舗案内</a></li>
       <li><a href="#contact"  class="drawer-nav__link">お問い合わせ</a></li>
     </ul>
   </div>
@@ -680,6 +676,51 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && panel.classList.contains('is-open')) { closeDrawer(); }
+    });
+  })();
+  </script>
+
+  <!-- ライトボックス（店舗地図表示） -->
+  <div class="map-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="店舗地図の表示">
+    <button class="map-lightbox-close" type="button" aria-label="地図を閉じる">×</button>
+    <div class="map-lightbox-frame">
+      <iframe class="map-lightbox-iframe" src="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var lightbox = document.querySelector('.map-lightbox');
+    var iframe   = document.querySelector('.map-lightbox-iframe');
+    var closeBtn = document.querySelector('.map-lightbox-close');
+
+    function open(src) {
+      iframe.src = src;
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function close() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      iframe.src = '';
+    }
+
+    document.querySelectorAll('.map-lightbox-trigger').forEach(function (btn) {
+      btn.addEventListener('click', function () { open(this.getAttribute('data-map-src')); });
+    });
+
+    closeBtn.addEventListener('click', close);
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) { close(); }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) { close(); }
     });
   })();
   </script>
