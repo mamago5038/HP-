@@ -1136,8 +1136,9 @@ img {
 .service-cards__note {
   text-align: center;
   margin-top: 32px;
-  font-size: 0.98rem;
-  color: var(--text-mid);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
   line-height: 1.8;
 }
 
