@@ -442,6 +442,10 @@ img {
   font-size: 0.92rem;
 }
 
+.btn-line__mobile-text {
+  display: none;
+}
+
 .btn-line--lg {
   padding: 18px 40px;
   font-size: 1.15rem;
@@ -2491,12 +2495,18 @@ details[open] .faq-q::after {
   }
 
   .btn-line--sm svg {
-    width: 22px;
-    height: 22px;
+    display: none;
   }
 
   .btn-line__full {
     display: none;
+  }
+
+  .btn-line__mobile-text {
+    display: inline-flex;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
   }
 
   .logo__company { display: none; }
