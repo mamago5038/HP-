@@ -47,9 +47,9 @@ html {
   overflow-x: hidden;
 }
 
-/* 固定ヘッダー(76px) + サイトナビ(48px) + 余白 */
+/* 固定ヘッダー(88px) + サイトナビ(48px) + 余白 */
 [id] {
-  scroll-margin-top: 136px;
+  scroll-margin-top: 148px;
 }
 
 body {
@@ -61,7 +61,7 @@ body {
   line-height: 1.85;
   color: var(--text-mid);
   background: var(--pink-pale);
-  padding-top: 124px; /* ヘッダー76px + サイトナビ48px */
+  padding-top: 136px; /* ヘッダー88px + サイトナビ48px */
 }
 
 img,
@@ -106,7 +106,7 @@ img {
 =========================== */
 .site-nav {
   position: fixed;
-  top: 76px;
+  top: 88px;
   left: 0;
   width: 100%;
   background: var(--pink);
@@ -161,7 +161,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 88px;
   gap: 16px;
 }
 
@@ -174,8 +174,8 @@ img {
 }
 
 .logo__img {
-  width: 52px;
-  height: 52px;
+  width: 66px;
+  height: 66px;
   object-fit: contain;
 }
 
@@ -221,9 +221,14 @@ img {
   color: var(--pink);
 }
 
+.header__tel-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
 .header__tel-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 700;
   color: var(--pink);
   letter-spacing: 0.06em;
@@ -231,7 +236,7 @@ img {
 
 .header__tel-num {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 900;
   color: var(--text);
   letter-spacing: 0.06em;
@@ -442,8 +447,13 @@ img {
 }
 
 .btn-line--sm {
-  padding: 10px 22px;
-  font-size: 0.92rem;
+  padding: 13px 28px;
+  font-size: 1.05rem;
+}
+
+.btn-line--sm svg {
+  width: 22px;
+  height: 22px;
 }
 
 .btn-line__mobile-text {
@@ -2641,20 +2651,20 @@ details[open] .faq-q::after {
 
   .header__tel-btn {
     display: flex;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
   }
 
   .header__tel-btn svg {
-    width: 21px;
-    height: 21px;
+    width: 24px;
+    height: 24px;
   }
 
   .header__right { gap: 8px; }
 
   .btn-line--sm {
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     padding: 0;
     border-radius: 50%;
   }
@@ -2678,10 +2688,10 @@ details[open] .faq-q::after {
 
   .logo__name { font-size: 1rem; }
 
-  .logo__img { width: 36px; height: 36px; }
+  .logo__img { width: 44px; height: 44px; }
 
   .header__inner {
-    height: 64px;
+    height: 72px;
     padding: 0 16px;
     gap: 8px;
   }
@@ -2696,7 +2706,7 @@ details[open] .faq-q::after {
     transform: none;
   }
 
-  [id] { scroll-margin-top: 120px; }
+  [id] { scroll-margin-top: 128px; }
 
   .site-nav__link {
     padding: 10px 14px;
