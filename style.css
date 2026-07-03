@@ -504,8 +504,13 @@ img {
 }
 
 .btn-tel--lg {
-  padding: 18px 40px;
-  font-size: 1.15rem;
+  padding: 13px 28px;
+  font-size: 0.98rem;
+}
+
+.btn-tel--lg svg {
+  width: 16px;
+  height: 16px;
 }
 
 .btn-pair {
@@ -2852,6 +2857,11 @@ details[open] .faq-q::after {
   .btn-line--xl {
     padding: 18px 36px;
     font-size: 1.1rem;
+  }
+
+  .btn-tel--lg {
+    padding: 11px 22px;
+    font-size: 0.88rem;
   }
 
   .cta-section { padding: 72px 0; }
