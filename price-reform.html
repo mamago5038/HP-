@@ -174,13 +174,28 @@
     }
 
     @media (max-width: 760px) {
+      .pn-table {
+        table-layout: fixed;
+        min-width: 0;
+      }
+      .pn-table col.col-item  { width: 46%; }
+      .pn-table col.col-price { width: 32%; }
+      .pn-table col.col-note  { width: 22%; }
       .pn-table td,
       .pn-table th {
-        padding: 11px 12px;
+        padding: 11px 8px;
         font-size: 0.92rem;
+      }
+      .pn-table td.td-price,
+      .pn-table th.th-price {
+        white-space: normal;
       }
       .pn-table td.td-price {
         font-size: 0.97rem;
+      }
+      .pn-table td.td-note,
+      .pn-table th.th-note {
+        white-space: normal;
       }
       .price-tab {
         padding: 9px 20px;
