@@ -1437,6 +1437,10 @@ img {
   justify-content: center;
 }
 
+.corporate__btns .btn-line {
+  word-break: keep-all;
+}
+
 /* ===========================
    LINEバー
 =========================== */
@@ -2957,6 +2961,13 @@ details[open] .faq-q::after {
   .corporate__btns {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .corporate__btns .btn-line {
+    white-space: nowrap;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 0.92rem;
   }
 
   .line-coupon__box {
