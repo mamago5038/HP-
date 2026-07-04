@@ -482,7 +482,8 @@ img {
 }
 
 /* 電話ボタン */
-.btn-tel {
+.btn-tel,
+.btn-google {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -497,10 +498,18 @@ img {
   transition: background 0.2s, transform 0.15s;
 }
 
-.btn-tel:hover {
+.btn-tel:hover,
+.btn-google:hover {
   background: var(--pink-light);
   transform: translateY(-2px);
   opacity: 1;
+}
+
+/* Googleクチコミ導線ボタン（地図の下に中央配置） */
+.btn-google {
+  display: flex;
+  width: fit-content;
+  margin: 16px auto 0;
 }
 
 /* 電話ボタン（2段組み：予約導線用） */
@@ -2796,6 +2805,14 @@ details[open] .faq-q::after {
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
+
+  .btn-google {
+    padding: 13px 20px;
+    font-size: 0.9rem;
+    white-space: normal;
+    word-break: keep-all;
+    text-align: center;
+  }
 
   .info-table th,
   .info-table td {
