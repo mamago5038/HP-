@@ -2062,10 +2062,20 @@ details[open] .faq-q::after {
 }
 
 .info-table td a {
+  display: inline-block;
   color: var(--pink-dark);
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: 0.04em;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.phone-cell-note {
+  margin-top: 4px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--text-mid);
 }
 
 .info-table__note {
@@ -2786,6 +2796,20 @@ details[open] .faq-q::after {
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
+
+  .info-table th,
+  .info-table td {
+    padding: 16px 14px;
+  }
+
+  .info-table th {
+    width: 30%;
+    font-size: 0.92rem;
+  }
+
+  .info-table td a {
+    font-size: 1.2rem;
+  }
 
   .header__tel { display: none; }
 
