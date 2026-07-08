@@ -2378,8 +2378,9 @@ details[open] .faq-q::after {
 
 
 .main-shop__tel {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 1.35rem;
   font-weight: 800;
