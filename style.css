@@ -2264,7 +2264,7 @@ details[open] .faq-q::after {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 16px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .main-shop-card {
@@ -2408,6 +2408,7 @@ details[open] .faq-q::after {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  flex: 1;
 }
 
 .main-shop__hours-row {
