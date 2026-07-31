@@ -1708,6 +1708,39 @@ img {
   padding: 32px 36px;
 }
 
+.sale-extended {
+  background: var(--pink-dark);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sale-extended__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  background: #fff;
+  padding: 3px 14px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sale-extended__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.sale-extended__desc {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  opacity: 0.95;
+}
+
 .sale-period {
   display: flex;
   align-items: center;
@@ -2766,6 +2799,14 @@ details[open] .faq-q::after {
 
   .sale-info {
     padding: 24px 20px;
+  }
+
+  .sale-extended {
+    padding: 20px 18px;
+  }
+
+  .sale-extended__title {
+    font-size: 1.1rem;
   }
 
   .sale-inquiry__items {
