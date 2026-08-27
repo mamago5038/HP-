@@ -1900,24 +1900,27 @@ img {
 
 .seasonal-notice__card .btn-pair {
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .seasonal-notice__content {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
   align-items: center;
-  gap: 24px;
+  gap: 32px;
 }
 
 .seasonal-notice__illust {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .seasonal-notice__illust img {
-  width: 200px;
+  width: 100%;
+  max-width: 380px;
   height: auto;
   display: block;
 }
@@ -1925,6 +1928,11 @@ img {
 @media (max-width: 960px) {
   .seasonal-notice__card {
     padding: 26px 26px 26px 30px;
+  }
+
+  .seasonal-notice__content {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+    gap: 24px;
   }
 }
 
