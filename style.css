@@ -1835,6 +1835,93 @@ img {
 }
 
 /* ===========================
+   季節のお知らせ
+=========================== */
+.seasonal-notice {
+  background: var(--pink-pale);
+  padding: 36px 0;
+}
+
+.seasonal-notice__card {
+  position: relative;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 28px 32px 28px 36px;
+  overflow: hidden;
+}
+
+.seasonal-notice__card::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 6px;
+  background: var(--pink);
+}
+
+.seasonal-notice__badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: var(--pink);
+  padding: 4px 13px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.seasonal-notice__title {
+  font-size: clamp(1.08rem, 2vw, 1.32rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.seasonal-notice__body {
+  max-width: 760px;
+  font-size: 0.94rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.seasonal-notice__note {
+  max-width: 760px;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.seasonal-notice__card .btn-pair {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .seasonal-notice__card {
+    padding: 26px 26px 26px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .seasonal-notice__card {
+    padding: 22px 20px 22px 24px;
+  }
+
+  .seasonal-notice__card .btn-pair {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ===========================
    開催中のセール
 =========================== */
 .sale-sec {
