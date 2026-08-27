@@ -1904,9 +1904,42 @@ img {
   flex-wrap: wrap;
 }
 
+.seasonal-notice__content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.seasonal-notice__illust {
+  display: flex;
+  justify-content: center;
+}
+
+.seasonal-notice__illust img {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
 @media (max-width: 960px) {
   .seasonal-notice__card {
     padding: 26px 26px 26px 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .seasonal-notice__content {
+    grid-template-columns: 1fr;
+  }
+
+  .seasonal-notice__illust {
+    order: -1;
+    margin-bottom: 6px;
+  }
+
+  .seasonal-notice__illust img {
+    width: min(100%, 320px);
   }
 }
 
