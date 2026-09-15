@@ -20,9 +20,6 @@
   --green-dark:   #357A62;
   --green-pale:   #EAF6F1;   /* 法人向けセクション背景 */
   --green-border: #BFE3D4;
-  --autumn-orange:      #D97B3F;  /* 秋のキャンペーン用アクセント */
-  --autumn-orange-dark: #B85F28;
-  --autumn-pale:        #FDEEDD;  /* 秋のキャンペーン用淡色背景 */
   --radius:     12px;
   --radius-lg:  20px;
   --shadow:     0 4px 20px rgba(180, 80, 110, 0.08);
@@ -2100,264 +2097,72 @@ img {
 /* ===========================
    秋の衣替えキャンペーンセール
 =========================== */
-.campaign-hero {
+.sale-campaign-title {
+  font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+  font-weight: 800;
+  color: var(--pink-dark);
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 28px;
+  margin: 0 0 20px;
 }
 
-.campaign-hero__badge {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #fff;
-  background: var(--autumn-orange);
-  padding: 4px 16px;
-  border-radius: 100px;
-  margin-bottom: 12px;
-}
-
-.campaign-hero__title {
-  font-size: clamp(1.35rem, 3vw, 1.7rem);
-  font-weight: 800;
-  color: var(--pink-dark);
-  line-height: 1.4;
-  margin-bottom: 18px;
-}
-
-.campaign-hero__period {
+.sale-flyer {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin: 0 0 24px;
 }
 
-.campaign-hero__period-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  background: var(--autumn-pale);
-  border: 2px solid var(--autumn-orange);
-  border-radius: var(--radius);
-  padding: 10px 22px;
-  min-width: 150px;
+.sale-flyer .sale-banner-img {
+  width: 100%;
+  max-width: 780px;
+  height: auto;
 }
 
-.campaign-hero__period-item--end {
-  background: var(--pink-light);
-  border-color: var(--pink);
+.sale-price-detail {
+  margin: 0 0 24px;
+  border-top: 1.5px solid var(--border);
+  padding-top: 4px;
 }
 
-.campaign-hero__period-label {
-  font-size: 0.75rem;
+.sale-price-detail summary {
+  cursor: pointer;
+  padding: 14px 0;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--autumn-orange-dark);
-}
-
-.campaign-hero__period-item--end .campaign-hero__period-label {
+  font-size: 0.95rem;
   color: var(--pink-dark);
+  list-style: none;
 }
 
-.campaign-hero__period-date {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--text);
+.sale-price-detail summary::-webkit-details-marker {
+  display: none;
 }
 
-.campaign-hero__period-arrow {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--text-mid);
-}
-
-.campaign-hero__period-full {
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--text-mid);
-}
-
-.campaign-lead {
-  background: #fff;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px 28px;
-  font-size: 1.02rem;
-  line-height: 1.9;
-  color: var(--text-mid);
-  margin-bottom: 8px;
-}
-
-.campaign-price-note {
-  text-align: right;
+.sale-price-detail summary::after {
+  content: '＋ 表示する';
+  float: right;
+  font-weight: 600;
   font-size: 0.82rem;
   color: var(--text-mid);
-  margin: 8px 4px 24px;
 }
 
-.campaign-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 32px;
+.sale-price-detail[open] summary::after {
+  content: '－ 閉じる';
 }
 
-.campaign-card {
-  background: #fff;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 24px 26px;
-  box-shadow: var(--shadow);
+.sale-price-detail__body {
+  padding: 4px 0 16px;
+  border-top: 1px dashed var(--border);
 }
 
-.campaign-card__title {
-  display: inline-block;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #fff;
-  background: var(--autumn-orange);
-  padding: 6px 18px;
-  border-radius: 100px;
-  margin-bottom: 18px;
+.sale-price-detail__body p {
+  font-size: 0.86rem;
+  line-height: 1.85;
+  color: var(--text-mid);
+  padding-top: 14px;
 }
 
-.campaign-card__list {
-  list-style: none;
-}
-
-.campaign-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px dashed var(--border);
-}
-
-.campaign-item:last-child {
-  border-bottom: none;
-}
-
-.campaign-item__name {
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-.campaign-item__sub {
-  display: block;
+.sale-price-detail__note {
   font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--text-mid);
-}
-
-.campaign-item__price {
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--pink-dark);
-  white-space: nowrap;
-}
-
-.campaign-card__catch {
-  text-align: center;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--autumn-orange-dark);
-  margin-bottom: 14px;
-}
-
-.campaign-bundle__prices {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 14px;
-}
-
-.campaign-bundle__price-box {
-  flex: 1;
-  text-align: center;
-  background: var(--autumn-pale);
-  border: 2px solid var(--autumn-orange);
-  border-radius: var(--radius);
-  padding: 14px 10px;
-}
-
-.campaign-bundle__price-num {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--autumn-orange-dark);
-  margin-bottom: 4px;
-}
-
-.campaign-bundle__price-val {
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--pink-dark);
-}
-
-.campaign-card__note {
-  font-size: 0.85rem;
-  color: var(--text-mid);
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-
-.campaign-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  list-style: none;
-}
-
-.campaign-tags li {
-  background: var(--pink-light);
-  border: 1px solid var(--border);
-  border-radius: 100px;
-  padding: 5px 14px;
-  font-size: 0.85rem;
-  color: var(--text);
-}
-
-.campaign-flat__price {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 8px;
-  background: var(--autumn-pale);
-  border: 2px solid var(--autumn-orange);
-  border-radius: var(--radius);
-  padding: 16px;
-  margin-bottom: 16px;
-}
-
-.campaign-flat__price-val {
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: var(--pink-dark);
-}
-
-.campaign-flat__price-label {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--autumn-orange-dark);
-}
-
-.campaign-cta {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.9;
-  color: var(--text);
-  background: var(--pink-light);
-  border-radius: var(--radius-lg);
-  padding: 24px 28px;
-  margin-bottom: 32px;
+  opacity: 0.85;
 }
 
 /* ===========================
@@ -3195,10 +3000,6 @@ details[open] .faq-q::after {
     padding: 24px 20px;
   }
 
-  .campaign-grid {
-    grid-template-columns: 1fr;
-  }
-
   .sale-extended {
     padding: 20px 18px;
   }
@@ -3259,35 +3060,8 @@ details[open] .faq-q::after {
 @media (max-width: 640px) {
   body { font-size: 16px; }
 
-  .campaign-hero {
-    margin-top: 28px;
-  }
-
-  .campaign-hero__period {
-    gap: 8px;
-  }
-
-  .campaign-hero__period-item {
-    min-width: 130px;
-    padding: 8px 14px;
-  }
-
-  .campaign-lead,
-  .campaign-cta {
-    padding: 18px 20px;
-    font-size: 0.95rem;
-  }
-
-  .campaign-card {
-    padding: 20px 18px;
-  }
-
-  .campaign-item__price {
-    font-size: 1.05rem;
-  }
-
-  .campaign-bundle__prices {
-    gap: 10px;
+  .sale-campaign-title {
+    margin-bottom: 16px;
   }
 
   .btn-google {
