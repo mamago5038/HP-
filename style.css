@@ -20,9 +20,9 @@
   --green-dark:   #357A62;
   --green-pale:   #EAF6F1;   /* 法人向けセクション背景 */
   --green-border: #BFE3D4;
-  --matsuri-indigo:      #3E4C6D;  /* 夏祭りお知らせ用アクセント（紺） */
-  --matsuri-indigo-deep: #2C3752;
-  --matsuri-vermilion:   #E2694A;  /* 夏祭りお知らせ用アクセント（朱色） */
+  --autumn-orange:      #D97B3F;  /* 秋のキャンペーン用アクセント */
+  --autumn-orange-dark: #B85F28;
+  --autumn-pale:        #FDEEDD;  /* 秋のキャンペーン用淡色背景 */
   --radius:     12px;
   --radius-lg:  20px;
   --shadow:     0 4px 20px rgba(180, 80, 110, 0.08);
@@ -1680,161 +1680,6 @@ img {
 }
 
 /* ===========================
-   夏祭りシーズンのお知らせ
-=========================== */
-.matsuri-sec {
-  background: var(--pink-pale);
-  padding: 36px 0;
-}
-
-.matsuri-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  align-items: center;
-  gap: 20px;
-  background: #FFFDF7;
-  border: 1.5px solid #EFE4D2;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  padding: 22px 30px 22px 34px;
-  overflow: hidden;
-}
-
-.matsuri-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 6px;
-  background: linear-gradient(180deg, var(--matsuri-indigo) 0%, var(--matsuri-vermilion) 100%);
-}
-
-.matsuri-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: #fff;
-  background: var(--matsuri-vermilion);
-  padding: 4px 13px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-
-.matsuri-title {
-  font-size: clamp(1.08rem, 2vw, 1.32rem);
-  font-weight: 800;
-  color: var(--matsuri-indigo-deep);
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
-
-.matsuri-body {
-  font-size: 0.92rem;
-  color: var(--text-mid);
-  line-height: 1.75;
-  margin-bottom: 8px;
-}
-
-.matsuri-note {
-  display: block;
-  font-size: 0.76rem;
-  color: var(--text-mid);
-  opacity: 0.85;
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-.matsuri-btns {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.btn-line-m, .btn-tel-m {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-weight: 700;
-  font-size: 0.86rem;
-  padding: 10px 20px;
-  border-radius: 100px;
-  text-decoration: none;
-  border: 1.5px solid transparent;
-  white-space: nowrap;
-}
-.btn-line-m {
-  background: var(--line-green);
-  color: #fff;
-}
-.btn-tel-m {
-  background: #fff;
-  color: var(--matsuri-indigo-deep);
-  border-color: var(--matsuri-indigo-deep);
-}
-
-.matsuri-illust-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.matsuri-collage {
-  position: relative;
-  width: clamp(180px, 25vw, 260px);
-  height: clamp(180px, 25vw, 260px);
-}
-.collage-img {
-  position: absolute;
-  display: block;
-}
-.collage-img--hanabi {
-  width: 94%;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-.collage-img--yukata {
-  height: 64%;
-  width: auto;
-  top: 38%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  filter: drop-shadow(0 8px 14px rgba(60, 40, 30, 0.16));
-}
-.collage-img--uchiwa {
-  width: 36%;
-  left: -8%;
-  bottom: -4%;
-  transform: rotate(-14deg);
-  z-index: 4;
-  filter: drop-shadow(0 4px 8px rgba(60, 40, 30, 0.14));
-}
-.collage-img--happi {
-  width: 32%;
-  right: -9%;
-  bottom: 0%;
-  transform: rotate(11deg);
-  z-index: 4;
-  filter: drop-shadow(0 4px 8px rgba(60, 40, 30, 0.14));
-}
-
-@media (max-width: 700px) {
-  .matsuri-card {
-    grid-template-columns: 1fr;
-    padding: 20px 20px 22px 26px;
-    gap: 12px;
-  }
-  .matsuri-illust-wrap { order: -1; }
-  .matsuri-collage { width: clamp(150px, 42vw, 190px); height: clamp(150px, 42vw, 190px); }
-}
-
-/* ===========================
    季節のお知らせ
 =========================== */
 .seasonal-notice {
@@ -2250,6 +2095,269 @@ img {
   border-radius: 12px;
   box-shadow: 0 8px 48px rgba(0, 0, 0, 0.45);
   object-fit: contain;
+}
+
+/* ===========================
+   秋の衣替えキャンペーンセール
+=========================== */
+.campaign-hero {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 28px;
+}
+
+.campaign-hero__badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--autumn-orange);
+  padding: 4px 16px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.campaign-hero__title {
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+  font-weight: 800;
+  color: var(--pink-dark);
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.campaign-hero__period {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.campaign-hero__period-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--autumn-pale);
+  border: 2px solid var(--autumn-orange);
+  border-radius: var(--radius);
+  padding: 10px 22px;
+  min-width: 150px;
+}
+
+.campaign-hero__period-item--end {
+  background: var(--pink-light);
+  border-color: var(--pink);
+}
+
+.campaign-hero__period-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--autumn-orange-dark);
+}
+
+.campaign-hero__period-item--end .campaign-hero__period-label {
+  color: var(--pink-dark);
+}
+
+.campaign-hero__period-date {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.campaign-hero__period-arrow {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-mid);
+}
+
+.campaign-hero__period-full {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-mid);
+}
+
+.campaign-lead {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+}
+
+.campaign-price-note {
+  text-align: right;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  margin: 8px 4px 24px;
+}
+
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.campaign-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+}
+
+.campaign-card__title {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  background: var(--autumn-orange);
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 18px;
+}
+
+.campaign-card__list {
+  list-style: none;
+}
+
+.campaign-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.campaign-item:last-child {
+  border-bottom: none;
+}
+
+.campaign-item__name {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.campaign-item__sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-mid);
+}
+
+.campaign-item__price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--pink-dark);
+  white-space: nowrap;
+}
+
+.campaign-card__catch {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--autumn-orange-dark);
+  margin-bottom: 14px;
+}
+
+.campaign-bundle__prices {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.campaign-bundle__price-box {
+  flex: 1;
+  text-align: center;
+  background: var(--autumn-pale);
+  border: 2px solid var(--autumn-orange);
+  border-radius: var(--radius);
+  padding: 14px 10px;
+}
+
+.campaign-bundle__price-num {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--autumn-orange-dark);
+  margin-bottom: 4px;
+}
+
+.campaign-bundle__price-val {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--pink-dark);
+}
+
+.campaign-card__note {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.campaign-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.campaign-tags li {
+  background: var(--pink-light);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.campaign-flat__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  background: var(--autumn-pale);
+  border: 2px solid var(--autumn-orange);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.campaign-flat__price-val {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--pink-dark);
+}
+
+.campaign-flat__price-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--autumn-orange-dark);
+}
+
+.campaign-cta {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.9;
+  color: var(--text);
+  background: var(--pink-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 32px;
 }
 
 /* ===========================
@@ -3087,6 +3195,10 @@ details[open] .faq-q::after {
     padding: 24px 20px;
   }
 
+  .campaign-grid {
+    grid-template-columns: 1fr;
+  }
+
   .sale-extended {
     padding: 20px 18px;
   }
@@ -3146,6 +3258,37 @@ details[open] .faq-q::after {
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
+
+  .campaign-hero {
+    margin-top: 28px;
+  }
+
+  .campaign-hero__period {
+    gap: 8px;
+  }
+
+  .campaign-hero__period-item {
+    min-width: 130px;
+    padding: 8px 14px;
+  }
+
+  .campaign-lead,
+  .campaign-cta {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+  }
+
+  .campaign-card {
+    padding: 20px 18px;
+  }
+
+  .campaign-item__price {
+    font-size: 1.05rem;
+  }
+
+  .campaign-bundle__prices {
+    gap: 10px;
+  }
 
   .btn-google {
     padding: 13px 20px;

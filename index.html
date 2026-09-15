@@ -39,7 +39,7 @@
   <meta name="twitter:description" content="五所川原市を中心に青森県津軽地方一円で無料集配を行うクリーニング専門店。LINEで簡単予約。">
   <meta name="twitter:image"       content="https://cleaning-mamago.com/feature-banner.jpg">
 
-  <link rel="stylesheet" href="style.css?v=20260827c">
+  <link rel="stylesheet" href="style.css?v=20260916a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
   <script src="scroll-clean.js" defer></script>
@@ -180,38 +180,201 @@
     </ul>
   </nav>
 
-  <!-- 夏祭りシーズンのお知らせ -->
-  <section class="matsuri-sec">
+  <!-- 開催中のセール -->
+  <section class="sale-sec sec" id="sale">
     <div class="container">
-      <div class="matsuri-card">
+      <h2 class="sec-title">セールのお知らせ</h2>
 
-        <div class="matsuri-text">
-          <span class="matsuri-badge">青森の夏祭り</span>
-          <h2 class="matsuri-title">浴衣・半纏のお手入れはお済みですか？</h2>
-          <p class="matsuri-body">ねぶた・ねぷた祭りや花火大会で着用する、浴衣・甚平・半纏などのクリーニングを承っております。着用前のお手入れにも、祭り後のしまい洗いにもご利用ください。</p>
-          <span class="matsuri-note">※素材や装飾、お品物の状態により、料金・仕上がり日数が異なります。</span>
-          <div class="matsuri-btns">
-            <a href="https://lin.ee/rT3CLPX" class="btn-line-m" target="_blank" rel="noopener noreferrer">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 10.6c0-4.9-4.9-8.9-11-8.9S0 5.7 0 10.6c0 4.4 3.9 8.1 9.2 8.8.4.1.9.3 1 .6.1.3.1.7 0 1l-.2.9c0 .3-.2 1.1 1 .6s6.2-3.7 8.5-6.3c1.6-1.7 2.5-3.5 2.5-5.6z"/></svg>
-              お祭り衣装について問い合わせる
-            </a>
-            <a href="tel:0120569887" class="btn-tel-m">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .99h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.5a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-              0120-569-887
-            </a>
+      <!-- 実施中セール：秋の衣替えキャンペーンセール（2026年9月17日（木）～10月31日（土）まで）。セール終了時はこの sale-archive に hidden 属性を付けて非表示にし、下の sale-empty から hidden 属性を外して使用 -->
+      <div class="sale-archive">
+
+        <div class="campaign-hero">
+          <p class="campaign-hero__badge">開催中のキャンペーン</p>
+          <h3 class="campaign-hero__title">秋の衣替えキャンペーンセール</h3>
+          <div class="campaign-hero__period">
+            <span class="campaign-hero__period-item">
+              <span class="campaign-hero__period-label">開始</span>
+              <span class="campaign-hero__period-date">9月17日（木）</span>
+            </span>
+            <span class="campaign-hero__period-arrow" aria-hidden="true">→</span>
+            <span class="campaign-hero__period-item campaign-hero__period-item--end">
+              <span class="campaign-hero__period-label">終了</span>
+              <span class="campaign-hero__period-date">10月31日（土）まで</span>
+            </span>
           </div>
+          <p class="campaign-hero__period-full">2026年9月17日（木）～10月31日（土）</p>
         </div>
 
-        <div class="matsuri-illust-wrap">
-          <div class="matsuri-collage">
-            <img class="collage-img collage-img--hanabi" src="matsuri-hanabi.png" alt="" width="480" height="480">
-            <img class="collage-img collage-img--yukata" src="matsuri-yukata.png" alt="浴衣" width="560" height="560">
-            <img class="collage-img collage-img--uchiwa" src="matsuri-uchiwa.png" alt="うちわ" width="380" height="380">
-            <img class="collage-img collage-img--happi" src="matsuri-happi.png" alt="祭 半纏" width="380" height="380">
+        <p class="campaign-lead">
+          朝晩が涼しくなり、毛布や秋冬物を準備する季節になりました。寒くなってから慌てないように、今のうちに毛布・羽毛布団・ジャンパー・ダウンをきれいにしておきませんか。夏に着た衣類も、しまう前にまとめてクリーニングしておくと安心です。
+        </p>
+
+        <p class="campaign-price-note">※掲載料金はすべて税込価格です。</p>
+
+        <div class="campaign-grid">
+
+          <div class="campaign-card">
+            <p class="campaign-card__title">寝具類</p>
+            <ul class="campaign-card__list">
+              <li class="campaign-item">
+                <span class="campaign-item__name">タオルケット（S）<small class="campaign-item__sub">※Wサイズは300円プラス</small></span>
+                <span class="campaign-item__price">500円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">綿毛布（S）<small class="campaign-item__sub">※Wサイズは300円プラス</small></span>
+                <span class="campaign-item__price">500円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">夏掛け（S）<small class="campaign-item__sub">※Wサイズは300円プラス</small></span>
+                <span class="campaign-item__price">800円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">毛布（1枚物）</span>
+                <span class="campaign-item__price">600円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">毛布合わせ</span>
+                <span class="campaign-item__price">800円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">毛布丹前</span>
+                <span class="campaign-item__price">800円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">毛布合わせ（W）</span>
+                <span class="campaign-item__price">1,600円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">羽毛肌掛</span>
+                <span class="campaign-item__price">2,000円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">羽毛布団（S）<small class="campaign-item__sub">※Wサイズは1,000円プラス</small></span>
+                <span class="campaign-item__price">4,500円</span>
+              </li>
+            </ul>
           </div>
+
+          <div class="campaign-card campaign-card--bundle">
+            <p class="campaign-card__title">夏物まとめ洗い</p>
+            <p class="campaign-card__catch">組み合わせ自由！</p>
+            <div class="campaign-bundle__prices">
+              <div class="campaign-bundle__price-box">
+                <span class="campaign-bundle__price-num">どれでも3点</span>
+                <span class="campaign-bundle__price-val">1,000円</span>
+              </div>
+              <div class="campaign-bundle__price-box">
+                <span class="campaign-bundle__price-num">どれでも5点</span>
+                <span class="campaign-bundle__price-val">1,500円</span>
+              </div>
+            </div>
+            <p class="campaign-card__note">対象品は下記からどれでも自由に組み合わせいただけます。</p>
+            <ul class="campaign-tags">
+              <li>Tシャツ</li>
+              <li>ポロシャツ</li>
+              <li>綿シャツ</li>
+              <li>オープンシャツ</li>
+              <li>ブラウス</li>
+              <li>タンクトップ</li>
+              <li>ベスト</li>
+              <li>セーター（薄手）</li>
+              <li>カーディガン（薄手）</li>
+              <li>ハーフパンツ</li>
+              <li>帽子（キャップ・ハット・ニットなど）</li>
+            </ul>
+          </div>
+
+          <div class="campaign-card campaign-card--flat">
+            <p class="campaign-card__title">ジャンパー類</p>
+            <div class="campaign-flat__price">
+              <span class="campaign-flat__price-label">各</span>
+              <span class="campaign-flat__price-val">650円</span>
+            </div>
+            <ul class="campaign-tags">
+              <li>ジャンパー</li>
+              <li>防寒ベスト</li>
+              <li>アノラック</li>
+              <li>防寒ズボン</li>
+              <li>コート</li>
+              <li>オーバー</li>
+            </ul>
+            <p class="campaign-card__note">※防水加工を付ける場合は350円プラスです。</p>
+          </div>
+
+          <div class="campaign-card">
+            <p class="campaign-card__title">ダウン類</p>
+            <ul class="campaign-card__list">
+              <li class="campaign-item">
+                <span class="campaign-item__name">ダウンジャケット</span>
+                <span class="campaign-item__price">1,800円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">ダウンコート</span>
+                <span class="campaign-item__price">2,500円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">ライトダウン</span>
+                <span class="campaign-item__price">1,000円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">ダウンベスト</span>
+                <span class="campaign-item__price">1,000円</span>
+              </li>
+              <li class="campaign-item">
+                <span class="campaign-item__name">キッズ用ダウン</span>
+                <span class="campaign-item__price">1,000円</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="campaign-cta">
+          衣替えで出てきた秋冬物や、しまう前の夏物をまとめてお持ちください。寒くなる前の早めのお手入れがおすすめです。ご来店をお待ちしております。
+        </p>
+
+        <div class="sale-info">
+
+          <!-- 注意事項 -->
+          <div class="sale-notes">
+            <p class="sale-note">※一部対象外のお品物があります。</p>
+            <p class="sale-note">※素材や状態によって追加料金が発生する場合があります。</p>
+            <p class="sale-note">※詳しくはLINEまたは店舗へお問い合わせください。</p>
+          </div>
+
+          <!-- 問い合わせ案内 -->
+          <div class="sale-inquiry">
+            <p class="sale-inquiry__title">セールについてお気軽にお問い合わせください</p>
+            <ul class="sale-inquiry__items">
+              <li class="sale-inquiry__item">この品物がセール対象か確認したい</li>
+              <li class="sale-inquiry__item">集配でもセールを利用できるか相談したい</li>
+              <li class="sale-inquiry__item">品物の詳しい料金を確認したい</li>
+            </ul>
+            <div class="sale-btn-pair">
+              <a href="https://lin.ee/rT3CLPX" class="btn-line btn-line--lg" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 10.6c0-4.9-4.9-8.9-11-8.9S0 5.7 0 10.6c0 4.4 3.9 8.1 9.2 8.8.4.1.9.3 1 .6.1.3.1.7 0 1l-.2.9c0 .3-.2 1.1 1 .6s6.2-3.7 8.5-6.3c1.6-1.7 2.5-3.5 2.5-5.6z"/></svg>
+                LINEでセールについて問い合わせる
+              </a>
+              <a href="tel:0120569887" class="sale-btn-tel">
+                <span class="sale-btn-tel__label">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .99h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.5a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
+                  電話で問い合わせる
+                </span>
+                <span class="sale-btn-tel__num">0120-569-887</span>
+              </a>
+            </div>
+            <p class="line-note">※LINEは24時間受付中です</p>
+          </div>
+
         </div>
 
       </div>
+
+      <!-- ▼ セールなし時の表示 -->
+      <div class="sale-empty" hidden>
+        <p>現在開催中のセールはありません。次回のお知らせをお待ちください。</p>
+      </div>
+
     </div>
   </section>
 
@@ -246,81 +409,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- 開催中のセール -->
-  <section class="sale-sec sec" id="sale">
-    <div class="container">
-      <h2 class="sec-title">セールのお知らせ</h2>
-
-      <!-- 終了済みセール（2026年6月13日〜8月15日）。次回セール開始時は hidden 属性を外して内容を更新して使用 -->
-      <div class="sale-archive" hidden>
-        <!-- 延長のお知らせ -->
-        <div class="sale-extended">
-          <p class="sale-extended__badge">延長決定</p>
-          <p class="sale-extended__title">ご好評につき、セール期間延長！</p>
-          <p class="sale-extended__desc">
-            7月31日まで開催予定だったセールを、<strong>ご好評につき8月15日（土）まで延長</strong>いたします！<br>
-            まだお持ち込みがお済みでない方も、この機会をぜひご利用ください。皆さまのご来店を心よりお待ちしております。
-          </p>
-        </div>
-
-        <div class="sale-banners">
-          <img src="sale-banner.jpeg"   alt="クリーニングセール案内（1）" class="sale-banner-img sale-lightbox-trigger" width="1100" height="776" fetchpriority="high">
-          <img src="sale-banner-2.jpeg" alt="クリーニングセール案内（2）" class="sale-banner-img sale-lightbox-trigger" width="1100" height="777">
-        </div>
-
-        <div class="sale-info">
-
-          <!-- 開催期間 -->
-          <div class="sale-period">
-            <span class="sale-period__badge">開催期間</span>
-            <span class="sale-period__dates">2026年6月13日〜8月15日（土）まで【延長】</span>
-          </div>
-
-          <!-- 説明文 -->
-          <p class="sale-desc">期間限定のお得なセールを開催中です。対象商品や詳しい料金は、上記のセール画像をご確認ください。画像をクリックすると、大きく表示してご覧いただけます。</p>
-
-          <!-- 注意事項 -->
-          <div class="sale-notes">
-            <p class="sale-note">※一部対象外のお品物があります。</p>
-            <p class="sale-note">※素材や状態によって追加料金が発生する場合があります。</p>
-            <p class="sale-note">※詳しくはLINEまたは店舗へお問い合わせください。</p>
-          </div>
-
-          <!-- 問い合わせ案内 -->
-          <div class="sale-inquiry">
-            <p class="sale-inquiry__title">セールについてお気軽にお問い合わせください</p>
-            <ul class="sale-inquiry__items">
-              <li class="sale-inquiry__item">この品物がセール対象か確認したい</li>
-              <li class="sale-inquiry__item">集配でもセールを利用できるか相談したい</li>
-              <li class="sale-inquiry__item">品物の詳しい料金を確認したい</li>
-            </ul>
-            <div class="sale-btn-pair">
-              <a href="https://lin.ee/rT3CLPX" class="btn-line btn-line--lg" target="_blank" rel="noopener noreferrer">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 10.6c0-4.9-4.9-8.9-11-8.9S0 5.7 0 10.6c0 4.4 3.9 8.1 9.2 8.8.4.1.9.3 1 .6.1.3.1.7 0 1l-.2.9c0 .3-.2 1.1 1 .6s6.2-3.7 8.5-6.3c1.6-1.7 2.5-3.5 2.5-5.6z"/></svg>
-                LINEでセールについて問い合わせる
-              </a>
-              <a href="tel:0120569887" class="sale-btn-tel">
-                <span class="sale-btn-tel__label">
-                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .99h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 8.5a16 16 0 006.59 6.59l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg>
-                  電話で問い合わせる
-                </span>
-                <span class="sale-btn-tel__num">0120-569-887</span>
-              </a>
-            </div>
-            <p class="line-note">※LINEは24時間受付中です</p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ▼ セールなし時の表示 -->
-      <div class="sale-empty">
-        <p>現在開催中のセールはありません。次回のお知らせをお待ちください。</p>
-      </div>
-
     </div>
   </section>
 
