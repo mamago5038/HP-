@@ -1862,15 +1862,26 @@ img {
   margin-bottom: 10px;
 }
 
+.hero__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.hero__brand-mascot {
+  height: 44px;
+  width: auto;
+  flex-shrink: 0;
+}
+
 .hero__title {
   font-size: clamp(1.7rem, 4.2vw, 2.7rem);
   font-weight: 900;
   color: var(--text);
   line-height: 1.45;
-  margin-bottom: 16px;
-}
-
-.hero__title-brand {
+  margin-bottom: 0;
   white-space: nowrap;
 }
 
@@ -3184,8 +3195,13 @@ details[open] .faq-q::after {
     margin-bottom: 8px;
   }
 
-  .hero__title {
+  .hero__brand {
+    gap: 8px;
     margin-bottom: 12px;
+  }
+
+  .hero__brand-mascot {
+    height: 32px;
   }
 
   .hero__desc {
