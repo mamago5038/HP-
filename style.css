@@ -2009,6 +2009,10 @@ img {
   margin-top: 48px;
 }
 
+.sale-empty__line {
+  margin: 20px 0 20px;
+}
+
 /* 問い合わせ案内ブロック */
 .sale-inquiry {
   margin-top: 28px;
